@@ -11,22 +11,30 @@
 
 <body>
     <h1>Welcome to the warehouse manager</h1>
-    <table id="tab">
-        <thead id="tabheader">
-            <tr>
+    <table>
+        <thead>
+            <tr id="headerrow">
                 <td>item1</td>
                 <td>item2</td>
                 <td>item3</td>
             </tr>
         </thead>
-        <tbody id="tabbody">
-            <tr>
+        <tbody>
+            <tr id="bodyrow">
                 <td>4</td>
                 <td>6</td>
                 <td>7</td>
             </tr>
         </tbody>
     </table>
+    <input id="showformbtn" type="button" value="Insert your item">
+    <div id="form" style="display: none;">
+        <input id="itemname" type="text" placeholder="Item name">
+        <label id="itemname-err" for="itemname"></label>
+        <input id="itemval" type="text" placeholder="Item value">
+        <label id="itemval-err" for="itemval"></label>
+        <input id="submitbtn" type="button" value="Insert">
+    </div>
     <script src="lib.js" type="text/javascript"></script>
 </body>
 
