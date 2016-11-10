@@ -3,7 +3,7 @@
 (function () {
     "use strict";
     var showFormBtn = document.getElementById("showformbtn"),
-        form = document.getElementById("form"),
+        form = document.getElementById("itemform"),
         submitBtn = document.getElementById("submitbtn"),
         itemName = document.getElementById("itemname"),
         itemVal = document.getElementById("itemval"),
@@ -11,6 +11,7 @@
         itemValErr = document.getElementById("itemval-err"),
         tabBody = document.getElementById("bodyrow"),
         tabHeader = document.getElementById("headerrow");
+    form.style.display = 'none';
     showFormBtn.addEventListener('click', function () {
         if (form.style.display === 'block') {
             form.style.display = 'none';
@@ -33,10 +34,8 @@
             itemValErr.innerHTML = "";
         }
         if (newItemName && !isNaN(newItemVal)) {
-            var newCellHeader = tabHeader.insertCell(-1),
-                newCellBody = tabBody.insertCell(-1);
-            newCellHeader.innerHTML = newItemName;
-            newCellBody.innerHTML = newItemVal;
+            tabHeader.insertCell(-1).innerHTML = newItemName;
+            tabBody.insertCell(-1).innerHTML = newItemVal;
             itemName.value = "";
             itemVal.value = "";
         }
