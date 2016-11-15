@@ -66,6 +66,7 @@
             changeItemsErr.innerHTML = "Not a number!";
         } else {
             itemMaxValue = newMax;
+            changeItemsErr.innerHTML = "";
             describe_items(itemsLabel, datiTabella, itemMaxValue);
         }
     }, false);
